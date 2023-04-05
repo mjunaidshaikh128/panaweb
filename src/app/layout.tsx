@@ -1,4 +1,6 @@
+import Header from '@/components/layout/Header'
 import './globals.css'
+import Footer from '@/components/layout/Footer'
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,8 +13,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" className='scroll-smooth'>
+      <body>
+        <Header />
+        {children}
+        <Footer />
+        </body>
     </html>
   )
 }
